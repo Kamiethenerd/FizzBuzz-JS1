@@ -4,30 +4,19 @@
 		<meta charset="utf-8">
 	    <title>Fizz Buzz</title>
 	    <meta name="description" content="Webpage">
-	   <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
-	   <!-- <script src="jquery-1.11.3.min.js"></script> -->
-	   <!-- <script src="scripts.js"></script> -->
 	</head>
-
 	<body>
 		<script type="text/javascript">
-		var num = 0
-
+		var num = 1
 		function runNum(){
-			findFizz(num);
+			fizzBuzz = num%3===0 && num%5===0 ? "Fizz Buzz" : num%3===0 ? 'Fizz' : num%5===0 ? 'Buzz' : "Num: " + num;
+			var node = document.createElement("LI");                 
+			var textnode = document.createTextNode(fizzBuzz);        
+			node.appendChild(textnode);                    
+			document.getElementById("display").appendChild(node);
 			num++;
 		}
-
-		function findFizz(x){
-			if (x%3===0) {
-				console.log('Fizz');
-			} else if (x%5===0){
-				console.log('Buzz');
-			} else {
-				console.log('number: ' + num);
-			};
-		} 
 		</script>
 		<button onclick="runNum()">Run Fizz Buzz</button>
-
+		<ul id="display"></ul>
 	</body>
