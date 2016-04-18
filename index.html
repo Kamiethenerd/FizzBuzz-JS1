@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <title>Fizz Buzz</title>
+	    <meta name="description" content="Webpage">
+	   <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+	   <!-- <script src="jquery-1.11.3.min.js"></script> -->
+	   <!-- <script src="scripts.js"></script> -->
+	</head>
+
+	<body>
+		<script type="text/javascript">
+		var num = 0
+
+		function runNum(){
+			findFizz(num);
+			num++;
+		}
+
+		function findFizz(x){
+			if (x%3===0) {
+				console.log('Fizz');
+			} else if (x%5===0){
+				console.log('Buzz');
+			} else {
+				console.log('number: ' + num);
+			};
+		} 
+		</script>
+		<button onclick="runNum()">Run Fizz Buzz</button>
+
+	</body>
